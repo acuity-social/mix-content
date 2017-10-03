@@ -2,7 +2,7 @@
 const config = require('../config');
 
 import React from 'react';
-import Navleft from './layout/Navleft.jsx';
+import NavBar from './layout/NavBar.jsx';
 
 import Header from './layout/Header.jsx';
 import Footer from './layout/Footer.jsx';
