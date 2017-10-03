@@ -7,7 +7,7 @@ export class RoutesList extends React.Component {
 
     constructor(props) {
 
-        // this.props.linkClient is supplied via App.jsx
+        // this.props.mixClient is supplied via App.jsx
         super(props);
 
 
@@ -22,7 +22,7 @@ export class RoutesList extends React.Component {
 
                 <Switch>
 
-                    <Route exact path="/" render={() => <Home linkClient={this.props.linkClient}/>}/>
+                    <Route exact path="/" render={() => <Home linkClient={this.props.mixClient}/>}/>
                     <Route render={() => <div className="alert alert-info">Sorry this page was not found</div> }/>
 
                 </Switch>

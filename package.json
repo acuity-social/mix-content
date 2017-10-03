@@ -27,7 +27,6 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "react-router-dom": "^4.1.1"
   }
