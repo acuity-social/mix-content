@@ -18,14 +18,6 @@ export default class Home extends React.Component {
 
     render() {
 
-        if (!this.state.systemStats) {
-
-            return <div className="home-page content-page">
-                <div className="alert alert-info">Please wait...</div>
-            </div>
-
-        }
-
         return (
 
             <div ref="homeRef" className="home-page content-page">
