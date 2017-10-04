@@ -14,41 +14,25 @@ export default class NavBar extends React.Component{
 
         return (
 
-            <div className={ this.props.inline ? 'nav-left nav-left-inline' : 'nav-left' }>
+            <nav className="nav-top">
 
-                <nav>
+                <ul className="nav-top-item-list">
+                    <li>
+                        <Link to='/publish'>publish</Link>
+                    </li>
+                    <li>
+                        <Link to='/browse'>browse</Link>
+                    </li>
+                    <li>
+                        <Link to='/about'>about</Link>
+                    </li>
+                    <li>
+                        <Link to='/help'>help</Link>
+                    </li>
+                </ul>
 
-                    <ul>
-                        <li>
-                            <Link to="/">
-                                <i className="fa fa-line-chart" aria-hidden="true"></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/block">
-                                <i className="fa fa-align-justify" aria-hidden="true"></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/account">
-                                <i className="fa fa-address-card-o" aria-hidden="true"></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/transaction">
-                                <i className="fa fa-exchange" aria-hidden="true"></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/settings">
-                                <i className="fa fa-cog" aria-hidden="true"></i>
-                            </Link>
-                        </li>
-                    </ul>
 
-                </nav>
-
-            </div>
+            </nav>
 
         )
 

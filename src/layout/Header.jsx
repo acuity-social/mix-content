@@ -14,6 +14,8 @@ class Header extends React.Component {
 
                 <h1 className="mix-name">MIX</h1>
 
+                <NavBar/>
+
             </header>
 
         )
