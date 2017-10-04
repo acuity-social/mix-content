@@ -3,7 +3,7 @@
 const path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    DotenvPlugin = require('dotenv-webpack');;
+    DotenvPlugin = require('dotenv-webpack');
 
 const config = require('./config');
 

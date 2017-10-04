@@ -2,7 +2,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import Navleft from './Navleft.jsx';
+import NavBar from './NavBar.jsx';
 
 class Header extends React.Component {
 
@@ -120,8 +120,6 @@ class Header extends React.Component {
                 </div>
 
                 <div className="clearfix"></div>
-
-                <Navleft inline="1"></Navleft>
 
             </header>
 

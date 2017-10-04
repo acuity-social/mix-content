@@ -10,8 +10,6 @@ import Footer from './layout/Footer.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
 import RoutesList from './RoutesList.jsx';
 
-const MixClient = require('mix-api').MixClient;
-
 export default class App extends React.Component {
 
     constructor(){
@@ -22,8 +20,7 @@ export default class App extends React.Component {
 
         try{
 
-            // The LinkClient will try various methods of connecting to a blockchain network
-            this.mixClient = new MixClient();
+            // Connect to Link and IPFS network
 
         }catch(err){
 
