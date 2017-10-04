@@ -2,6 +2,7 @@ import React from 'react'
 import {Route, Switch, withRouter, Link} from 'react-router-dom';
 
 import Home from './pages/Home.jsx';
+import Publish from './pages/Publish.jsx';
 
 export class RoutesList extends React.Component {
 
@@ -22,7 +23,8 @@ export class RoutesList extends React.Component {
 
                 <Switch>
 
-                    <Route exact path="/" render={() => <Home linkClient={this.props.mixClient}/>}/>
+                    <Route exact path="/" render={() => <Home/>}/>
+                    <Route exact path="/publish" component={Publish}/>
                     <Route render={() => <div className="alert alert-info">Sorry this page was not found</div> }/>
 
                 </Switch>
