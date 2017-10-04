@@ -2,12 +2,44 @@ header{
 
   padding: @default-padding;
   border-bottom: 1px solid @dark-grey;
+  position: relative;
 
   .mix-name{
     padding: 0;
     margin: 0;
     width: 15%;
     display: inline-block;
+  }
+
+  .nav-top{
+
+    width: 85%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    font-size: 0.9em;
+
+    ul.nav-top-item-list{
+
+      display: inline-block;
+      width: 60%;
+      margin: 0;
+
+      li{
+
+        display: inline-block;
+        width: 25%;
+        list-style-type: none;
+
+        a:hover{
+          text-decoration: none;
+        }
+
+      }
+
+    }
+
   }
 
 }
