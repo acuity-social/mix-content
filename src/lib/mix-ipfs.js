@@ -34,27 +34,27 @@ export default class MixIpfs{
 
     }
 
-    addContent(){
+    addContent(content){
 
-        const content =  {
+        const fileData = {
             path: 'hello.txt',
-            content: Buffer.from('Elloo der')
+            content: Buffer.from(content)
         };
 
         return new Promise(
             (resolve, reject)=>{
 
-                this.ipfsNode.files.add(content, (err, result) => {
+                this.ipfsNode.files.add(fileData, (err, result) => {
 
                     if (err) { return reject(err); }
 
-                    let fileMultiHash = null;
+                    let fileMultihash = null;
 
                     console.log('\nAdded file:', result[0].path, result[0].hash);
 
                     fileMultihash = result[0].hash;
 
-                    resolve(fileMultiHash);
+                    resolve(fileMultihash);
                 })
 
             }
