@@ -28,7 +28,9 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "async": "^2.5.0",
     "font-awesome": "^4.7.0",
+    "ipfs": "^0.26.0",
     "react-router-dom": "^4.1.1"
   }
 }

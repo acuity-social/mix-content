@@ -1,6 +1,11 @@
+
+// Publish page
+
 import React from 'react';
 
-// Ethereum Explorer home page - displays system stats
+const IPFS = require('ipfs'),
+    node = new IPFS(),
+    series = require('async').series;
 
 export default class Publish extends React.Component {
 
@@ -8,6 +13,14 @@ export default class Publish extends React.Component {
 
         super(props);
 
+        series([
+            (cb) => node.on('ready', cb),
+            (cb) => node.version((err, version) => {
+                if (err) { return cb(err) }
+                console.log('Version:', version.version)
+                cb()
+            })
+        ])
 
     }
 
