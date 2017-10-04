@@ -12,7 +12,7 @@ class Header extends React.Component {
 
             <header>
 
-                <h1 className="link-name">MIX</h1>
+                <h1 className="mix-name">MIX</h1>
 
             </header>
 
