@@ -26,6 +26,10 @@ export default class Home extends React.Component {
 
                     <img src="/assets/icelandHouse.png" />
 
+                    <p className="home-image-blurb">
+                        Decentralised, programmable content for the new web
+                    </p>
+
                 </div>
 
             </div>
