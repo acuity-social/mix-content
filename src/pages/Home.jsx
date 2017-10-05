@@ -20,7 +20,7 @@ export default class Home extends React.Component {
 
         return (
 
-            <div ref="homeRef" className="home-page content-page">
+            <div className="home-page">
 
                 <div className="home-image-container">
 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import NavBar from './NavBar.jsx';
 
@@ -12,7 +12,9 @@ class Header extends React.Component {
 
             <header>
 
-                <h1 className="mix-name">MIX</h1>
+                <h1 className="mix-name">
+                    <Link to="/">MIX</Link>
+                </h1>
 
                 <NavBar/>
 
