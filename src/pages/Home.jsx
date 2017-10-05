@@ -22,9 +22,11 @@ export default class Home extends React.Component {
 
             <div ref="homeRef" className="home-page content-page">
 
-                <h3 className="content-heading">Home page</h3>
+                <div className="home-image-container">
 
-                <div className="clearfix"></div>
+                    <img src="/assets/icelandHouse.png" />
+
+                </div>
 
             </div>
 
