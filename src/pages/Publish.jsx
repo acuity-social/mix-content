@@ -62,7 +62,7 @@ export default class Publish extends React.Component {
 
         return (
 
-            <div ref="homeRef" className="content-page">
+            <div className="content-page">
 
                 <h3 className="content-heading">Publish</h3>
 

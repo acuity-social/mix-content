@@ -19,7 +19,7 @@ export class RoutesList extends React.Component {
 
         return (
 
-            <div className="page-content">
+            <div className="route-container">
 
                 <Switch>
 
