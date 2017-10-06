@@ -21,12 +21,6 @@ export default class Publish extends React.Component {
 
     }
 
-    componentDidMount() {
-
-
-
-    }
-
     handleInputChange(event) {
 
         const target = event.target,
@@ -74,7 +68,7 @@ export default class Publish extends React.Component {
 
                             <div className="form-group">
 
-                                <label>Send string</label>
+                                <label>Publish pastebin</label>
 
                                 <textarea onChange={this.handleInputChange} name="stringData" className="form-control" value={this.state.stringData}></textarea>
 
