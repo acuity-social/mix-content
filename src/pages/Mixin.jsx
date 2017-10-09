@@ -1,6 +1,10 @@
 // Publish page
 
 import React from 'react';
+const mixApi = require('../lib/mix-api/index');
+
+const MixConnector = mixApi.MixConnector,
+    MixinRegistryContract = mixApi.mixContracts.MixinRegistryContract;
 
 export default class Mixin extends React.Component {
 
@@ -13,6 +17,22 @@ export default class Mixin extends React.Component {
         this.state = {
             stringData : ''
         };
+
+        const mixConnector = new MixConnector();
+
+        try{
+
+            // Connect to a given blockchain as well as the Mixin Registry Contract
+            this.web3 = mixConnector.blockchainConnect();
+            this.mixinRegistryContract = new MixinRegistryContract(this.web3);
+            this.mixinRegistryContract.contractConnect();
+
+        }catch(err){
+
+            console.error(err.message);
+            return;
+        }
+
 
 
     }
