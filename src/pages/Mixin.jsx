@@ -15,8 +15,12 @@ export default class Mixin extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
 
         this.state = {
-            stringData : ''
+            parentId : 0,
+            uri : '',
+            description : ''
         };
+
+        this.addMixin = this.addMixin.bind(this);
 
         const mixConnector = new MixConnector();
 
@@ -30,7 +34,6 @@ export default class Mixin extends React.Component {
         }catch(err){
 
             console.error(err.message);
-            return;
         }
 
 
@@ -46,6 +49,25 @@ export default class Mixin extends React.Component {
         this.setState({
             [name]: value
         });
+
+    }
+
+    addMixin(ev){
+
+        ev.preventDefault();
+
+        this.mixinRegistryContract.addMixin(this.state).then(
+            (result)=>{
+
+                console.log(result);
+
+            },
+            (error)=>{
+
+                console.error(error.message);
+
+            }
+        )
 
     }
 
@@ -72,7 +94,7 @@ export default class Mixin extends React.Component {
                                 <input
                                     type="number"
                                     onChange={this.handleInputChange}
-                                    name="stringData"
+                                    name="parentId"
                                     className="form-control"
                                     value={this.state.parentId} />
 
@@ -85,7 +107,7 @@ export default class Mixin extends React.Component {
                                 <input
                                     type="text"
                                     onChange={this.handleInputChange}
-                                    name="stringData"
+                                    name="uri"
                                     className="form-control"
                                     value={this.state.uri} />
 
@@ -97,7 +119,7 @@ export default class Mixin extends React.Component {
 
                                 <textarea
                                     onChange={this.handleInputChange}
-                                    name="stringData"
+                                    name="description"
                                     className="form-control"
                                     value={this.state.description}></textarea>
 
