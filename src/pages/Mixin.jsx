@@ -8,7 +8,6 @@ export default class Mixin extends React.Component {
 
         super(props);
 
-        this.sendData = this.sendData.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
 
         this.state = {
