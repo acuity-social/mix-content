@@ -21,6 +21,9 @@ export default class NavBar extends React.Component{
                         <Link to='/publish'>publish</Link>
                     </li>
                     <li>
+                        <Link to='/mixins'>mixins</Link>
+                    </li>
+                    <li>
                         <Link to='/browse'>browse</Link>
                     </li>
                     <li>
