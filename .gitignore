@@ -2,3 +2,4 @@ node_modules
 .idea
 .env
 src/lib/mix-proto
+src/lib/mix-api
