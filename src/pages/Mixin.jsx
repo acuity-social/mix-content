@@ -61,13 +61,46 @@ export default class Mixin extends React.Component {
 
                     <div className="col-md-6 col-md-offset-3">
 
-                        <form onSubmit={this.sendData}>
+                        <h4>Add new mixin</h4>
+
+                        <form onSubmit={this.addMixin}>
 
                             <div className="form-group">
 
-                                <label>Publish pastebin</label>
+                                <label>Parent ID</label>
 
-                                <textarea onChange={this.handleInputChange} name="stringData" className="form-control" value={this.state.stringData}></textarea>
+                                <input
+                                    type="number"
+                                    onChange={this.handleInputChange}
+                                    name="stringData"
+                                    className="form-control"
+                                    value={this.state.parentId} />
+
+                            </div>
+
+                            <div className="form-group">
+
+                                <label>Mixin URI</label>
+
+                                <input
+                                    type="text"
+                                    onChange={this.handleInputChange}
+                                    name="stringData"
+                                    className="form-control"
+                                    value={this.state.uri} />
+
+                            </div>
+
+                            <div className="form-group">
+
+                                <label>Description</label>
+
+                                <textarea
+                                    onChange={this.handleInputChange}
+                                    name="stringData"
+                                    className="form-control"
+                                    value={this.state.description}></textarea>
+
 
                             </div>
 
