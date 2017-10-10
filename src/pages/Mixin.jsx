@@ -21,13 +21,14 @@ export default class Mixin extends React.Component {
         };
 
         this.addMixin = this.addMixin.bind(this);
+        this.getMixinCount = this.getMixinCount.bind(this);
 
         const mixConnector = new MixConnector();
 
         try{
 
             // Connect to a given blockchain as well as the Mixin Registry Contract
-            this.web3 = mixConnector.blockchainConnect();
+            this.web3 = mixConnector.blockchainConnect(/*'http://localhost:8645'*/);
             this.mixinRegistryContract = new MixinRegistryContract(this.web3);
             this.mixinRegistryContract.contractConnect();
 
@@ -35,8 +36,6 @@ export default class Mixin extends React.Component {
 
             console.error(err.message);
         }
-
-
 
     }
 
@@ -71,13 +70,25 @@ export default class Mixin extends React.Component {
 
     }
 
+    getMixinCount(ev){
+
+        ev.preventDefault();
+        this.mixinRegistryContract.getMixinCount();
+
+    }
+
     render() {
 
         return (
 
             <div className="content-page">
 
-                <h3 className="content-heading">Mixins</h3>
+                <h3 className="content-heading">
+                    Mixins
+
+                    <button onClick={this.getMixinCount} className="btn btn-success">Get count</button>
+
+                </h3>
 
                 <div className="content-panel">
 
